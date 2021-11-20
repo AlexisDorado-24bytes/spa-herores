@@ -1,0 +1,86 @@
+<section class="animated fadeIn d-none d-md-block">
+  <div class="container shadow rounded" style="max-width: 100%">
+    <ng-container>
+      <div class="row">
+        <div class="card profile-card-3">
+          <div class="background-block">
+            <img
+              src="assets/img/fondo.jpg"
+              alt="profile-sample1"
+              class="background"
+            />
+          </div>
+          <div class="profile-thumb-block">
+            <img
+              [src]="resHeroe.img"
+              [alt]="resHeroe.nombre"
+              class="profile img-fluid"
+            />
+          </div>
+          <div class="card-content">
+            <h2>
+              {{ resHeroe.nombre | uppercase
+              }}<small
+                >{{ resHeroe.casa }} |
+                {{ resHeroe.aparicion | date: "y" }}</small
+              >
+            </h2>
+            <div class="row">
+              <div class="col-md-6 text-justify">
+                <p>Fase Célebre: {{ resHeroe.bio }}</p>
+              </div>
+              <div class="col-md-3 text-left">
+                <p>
+                  Casa: {{ resHeroe.casa }} | Aparicion:
+                  {{ resHeroe.aparicion | date: "y" }}
+                </p>
+              </div>
+            </div>
+            <div class="text-left">
+              <a
+                type="button"
+                routerLink="/heros"
+                class="btn btn-outline-info btn-regresar"
+                >Regresar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>
+
+<section class="d-lg-none d-md-none px-3">
+  <div class="card mb-3">
+    <div class="d-flex justify-content-center">
+      <img
+        [src]="resHeroe.img"
+        [alt]="resHeroe.nombre"
+        class="profile-peq img-fluid"
+        alt="..."
+        style="max-width: 50%"
+      />
+    </div>
+
+    <div class="card-body">
+      <h2 class="text-center">
+        {{ resHeroe.nombre | uppercase }}
+        <br />
+        <small
+          >{{ resHeroe.casa }} | {{ resHeroe.aparicion | date: "y" }}</small
+        >
+      </h2>
+      <p>{{ resHeroe.bio }}</p>
+
+      <p class="card-text">
+        <a
+          type="button"
+          routerLink="/heros"
+          class="btn btn-outline-info btn-regresar"
+          >Regresar</a
+        >
+      </p>
+    </div>
+  </div>
+</section>

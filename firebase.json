@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "./dist/spa-super-heroes",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

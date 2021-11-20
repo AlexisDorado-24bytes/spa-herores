@@ -1,0 +1,22 @@
+<ng-container *ngIf="encontrado; else elseTemplate">
+  <h1>Buscando: {{ termino }}</h1>
+  <hr>
+  
+<div class="row animated fadeIn">
+  <div class="row">
+  
+    </div>
+    <app-heroes-tarjeta class="col-lg-4 col-md-4  col-sm-6  mb-4" [i]= "i" [hero]= "hero" *ngFor = "let hero of heros; let i = index" >
+    </app-heroes-tarjeta> 
+  
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>¡Lo entimos!</strong> el térmimo <span style="font-family: monospace;">{{ termino }} </span> no existe.
+        <button (click)="redirect()" type="button"  class="close" data-dismiss="alert" aria-label="Close">
+          <span (click)="redirect()" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+</ng-template>
